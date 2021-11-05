@@ -21,6 +21,8 @@
 #define APP_RELATIVE_PATH "\\ExplorerPatcher"
 
 // This allows compiling with older Windows SDKs as well
+// Before Windows SDK 10.0.22000.0
+#ifndef NTDDI_WIN10_CO
 #ifndef DWMWA_USE_HOSTBACKDROPBRUSH
 #define DWMWA_USE_HOSTBACKDROPBRUSH 17            // [set] BOOL, Allows the use of host backdrop brushes for the window.
 #endif
@@ -54,6 +56,8 @@
 #ifndef DWMWA_VISIBLE_FRAME_BORDER_THICKNESS
 #define DWMWA_VISIBLE_FRAME_BORDER_THICKNESS 37   // [get] UINT, width of the visible border around a thick frame window
 #endif
+#endif
+
 #ifndef DWMWA_MICA_EFFFECT
 #define DWMWA_MICA_EFFFECT 1029
 #endif
